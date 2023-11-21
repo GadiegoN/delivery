@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Pizzaria GadiegoN</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/fontawesome.css" />
+    <link rel="stylesheet" href="../css/animate.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <section class="bg-menu">
+      <div class="menu-left">
+        <div class="logo">
+          <img src="../img/logo.png" width="100" alt="" />
+        </div>
+
+        <div class="links">
+          <a href="./home.html" class="link-item">
+            <i class="fas fa-home"></i> Inicio
+          </a>
+          <a href="#" class="link-item active">
+            <i class="fas fa-utensils"></i> Pedidos
+          </a>
+          <a href="./menu.html" class="link-item">
+            <i class="fas fa-book-open"></i> Cardápio
+          </a>
+          <a href="./setup.html" class="link-item">
+            <i class="fas fa-cog"></i> Configurações
+          </a>
+          <a href="./company.html" class="link-item">
+            <i class="fas fa-building"></i> Empresa
+          </a>
+          <a href="./report.html" class="link-item">
+            <i class="fas fa-chart-line"></i> Relatório
+          </a>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="menu-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 d-flex align-items-center mt-4">
+                <h1 class="title-page">
+                  <b>
+                    <i class="fas fa-utensils"></i>
+                    Painel de pedidos
+                  </b>
+                </h1>
+
+                <div class="container-right">
+                  <div class="container-user-data">
+                    <p>Pizzaria GadiegoN</p>
+                    <span>pizza@gadiegon.com</span>
+                  </div>
+
+                  <a href="" class="btn btn-white btn-sm">
+                    <i class="fas fa-sign-out-alt"></i> &nbsp; Sair
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-inner">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="menus-order">
+                  <a href="#" class="btn btn-white btn-sm active">
+                    <i class="far fa-dot-circle"></i> Pendentes
+                    <span class="badge-total-order">2</span>
+                  </a>
+
+                  <a href="#" class="btn btn-white btn-sm">
+                    <i class="far fa-thumbs-up"></i> Aceitos
+                    <span class="badge-total-order">2</span>
+                  </a>
+
+                  <a href="#" class="btn btn-white btn-sm">
+                    <i class="far fa-clock"></i> Em preparo
+                    <span class="badge-total-order">2</span>
+                  </a>
+
+                  <a href="#" class="btn btn-white btn-sm">
+                    <i class="fas fa-motorcycle"></i> Em entrega
+                    <span class="badge-total-order">2</span>
+                  </a>
+
+                  <a href="#" class="btn btn-white btn-sm">
+                    <i class="far fa-check-circle"></i> Concluidos
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="row list-orders mt-5">
+                  <div class="col-3">
+                    <div class="card card-order">
+                      <div class="card-order-header">
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-white btn-sm dropdown-toggle active"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            id="menuAcoes"
+                          >
+                            Pendente
+                          </button>
+                          <div
+                            class="dropdown-menu"
+                            aria-labelledby="menuAcoes"
+                          >
+                            <a class="dropdown-item" href="#"
+                              >Mover para <b>Aceitos</b>
+                              <i class="far fa-thumbs-up"></i
+                            ></a>
+                            <a class="dropdown-item" href="#"
+                              >Mover para <b>Em preparo</b>
+                              <i class="far fa-clock"></i
+                            ></a>
+                            <a class="dropdown-item" href="#"
+                              >Mover para <b>Em entrega</b>
+                              <i class="fas fa-motorcycle"></i
+                            ></a>
+                            <a class="dropdown-item" href="#"
+                              >Mover para <b>Concluídos</b>
+                              <i class="far fa-check-circle"></i
+                            ></a>
+                            <a class="dropdown-item" href="#"
+                              >Recusar Pedido <i class="far fa-times-circle"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <p class="number-order mt-2">#1</p>
+                      </div>
+
+                      <div class="card-content" data-bs-toggle="modal" data-bs-target="#modalDetails">
+                        <div class="card-order-body mt-3">
+                          <p class="info-order">
+                            <i class="fas fa-user"></i> Gadiego Nogueira
+                          </p>
+                          <p class="info-order">
+                            <i class="fas fa-motorcycle"></i> Entrega
+                          </p>
+                          <p class="info-order">
+                            <i class="fas fa-coins"></i> Dinheiro
+                            <span>Troco para R$ 50,00</span>
+                          </p>
+                        </div>
+
+                        <div class="separate"></div>
+
+                        <div class="card-order-footer">
+                          <p class="time-order">Recebido há 33 minutos</p>
+                          <p class="total-order"><b>R$ 143,50</b></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="modal fade" id="modalDetails" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">#1 <span class="time-order">Recebido há 33 minutos</span></h5>
+              <button class="btn btn-white btn-sm btn-close-modal" type="button" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fas fa-times"></i>&nbsp; Fechar
+              </button>
+            </div>
+  
+            <div class="modal-body">
+  
+              <div class="container-data-orders pt-1">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card card-address cursor-default">
+                      <div class="img-icon-details">
+                        <i class="fas fa-user"></i>
+                      </div>
+                      <div class="infos pr-0">
+                        <div class="d-flex">
+                          <p class="name mb-0"><b>Gadiego Nogueira</b></p>
+                          <span class="text mb-0">(34) 98408-1905</span>
+                        </div>
+                        <div class="d-flex">
+                          <span class="n-info-order">Recebido em 07/10 ás 18:00</span>
+                          <span class="n-info-order mb-0 link">
+                            <i class="fas fa-motorcycle"></i> Entrega
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="col-12">
+                    <div class="card card-address cursor-default mt-2">
+                      <div class="img-icon-details">
+                        <i class="fas fa-coins"></i>
+                      </div>
+                      <div class="infos pr-0">
+                        <p class="name mb-0"><b>Dinheiro</b></p>
+                        <span class="text mb-0">Troco para: R$ 100,00</span>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="col-12">
+                    <div class="card card-address mt-2">
+                      <div class="img-icon-details">
+                        <i class="fas fa-map-marked-alt"></i>
+                      </div>
+                      <div class="infos pr-0">
+                          <p class="name mb-0"><b>Rua Jose, 123, Centro</b></p>
+                          <span class="text mb-0">Conquista - MG / CEP: 38195-000</span>
+                        </div>
+                        <div class="icon-edit">
+                          <i class="fas fa-location-arrow"></i>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="container-items-orders cart">
+                <div id="itemsOrder">
+                  <div class="card-item mb-2 pr-0">
+                    <div class="container-details">
+    
+                        <div class="details-product">
+    
+                            <div class="infos-product">
+                                <p class="name"><b>1x Calabresa</b></p>
+                                <p class="price"><b>R$ 39,90</b></p>
+                            </div>
+    
+                            <div class="infos-product">
+                                <p class="name-opcional mb-0">1x Borda de Catupiry</p>
+                                <p class="price-opcional mb-0">+ R$ 8,90</p>
+                            </div>
+    
+                            <div class="infos-product">
+                                <p class="obs-optional mb-0">- Observação para enviar talheres de plastico</p>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                  </div>
+      
+                  <div class="card-item mb-2 pr-0">
+                      <div class="container-details">
+      
+                          <div class="details-product">
+      
+                              <div class="infos-product">
+                                  <p class="name"><b>1x 4 Queijos</b></p>
+                                  <p class="price"><b>R$ 39,90</b></p>
+                              </div>
+      
+                              <div class="infos-product">
+                                  <p class="name-opcional mb-0">1x Borda de Catupiry</p>
+                                  <p class="price-opcional mb-0">+ R$ 8,90</p>
+                              </div>
+      
+                          </div>
+      
+                      </div>
+                  </div>
+      
+                  <div class="card-item mb-2">
+                      <div class="details-product">
+                          <div class="infos-product">
+                              <p class="name mb-0"><i class="fas fa-motorcycle"></i>&nbsp; <b>Taxa de entrega</b></p>
+                              <p class="price mb-0"><b>+ R$ 15,00</b></p>
+                          </div>
+                      </div>
+                  </div>
+      
+                  <div class="card-item mb-2">
+                      <div class="details-product">
+                          <div class="infos-product">
+                              <p class="name-total mb-0"><b>Total</b></p>
+                              <p class="price-total mb-0"><b>R$ 105,50</b></p>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="footer-btn mt-3">
+                  <button type="button" class="btn btn-yellow btn-sm">Aceitar Pedido</button>
+                  <button type="button" onclick="printBy()" class="btn btn-yellow btn-sm">Imprimir Pedido</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../js/screen.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/jquery.min.js"></script>
+  </body>
+</html>
