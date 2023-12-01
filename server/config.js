@@ -1,7 +1,7 @@
 var config = {
     dev: {
         url: 'http://localhost/',
-        port: 3000,
+        port: 3003,
         environment: 'DEV',
         database: {
             host: '127.0.0.1',
