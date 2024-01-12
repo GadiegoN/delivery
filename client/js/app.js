@@ -86,5 +86,36 @@ app.method = {
     logout: () => {
         localStorage.clear()
         window.location.href = '/dashboard/login.html'
+    },
+
+    message: (text, color = 'red', time = 3500) => {
+        let conteiner = document.querySelector('#container-message')
+
+        if(conteiner.childElementCount > 3) {
+            return
+        }
+
+        let id = Math.floor(Date.now() * Math.random())
+
+        let msg = `<div id="msg-${id}" class="toast ${color}">${text}</div>`
+
+        conteiner.innerHTML += msg
+
+        setTimeout(() => {
+            document.querySelector(`#msg-${id}`).remove()
+        }, time)
+    },
+
+    uploadCompanyData: () => {
+        document.querySelector('.company-name').innerHTML = app.method.getValueStorage('name')
+        document.querySelector('.company-email').innerHTML = app.method.getValueStorage('email')
+
+        let logotipo = app.method.getValueStorage('logo')
+
+        if(logotipo != undefined && logotipo != null && logotipo != 'null' && logotipo != '') {
+            document.querySelector('.company-logo').src = '/public/images/company/' + logotipo
+        } else {
+            document.querySelector('.company-logo').src = '/public/images/default.jpg'
+        }
     }
 }

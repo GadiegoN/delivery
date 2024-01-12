@@ -35,6 +35,10 @@ server.use(
     }
 )
 
+server.get('/public/*', restify.plugins.serveStatic({
+    directory: __dirname
+}))
+
 server.on('restifyError', function(req, res, err, calback) {
     err.toJSON = function custonToJSON() {
         return {

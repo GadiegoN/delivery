@@ -1,7 +1,7 @@
 var jwt = require("jsonwebtoken");
 var SchemaObject = require("node-schema-object")
 
-var UserAccessToken = new SchemaObject({ accessToken: string }, {
+var UserAccessToken = new SchemaObject({ accessToken: String }, {
     methods: {
         generateAccessToken: (data) => {
             try {

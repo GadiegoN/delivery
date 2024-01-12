@@ -18,13 +18,13 @@ login.method = {
         let password = document.querySelector("#txtPasswordLogin").value.trim();
 
         if(email.length == 0) {
-            alert("Por favor, informe seu email.")
+            app.method.message("Por favor, informe seu email.")
             document.querySelector("#txtEmailLogin").focus()
             return;
         }
 
         if(password.length == 0) {
-            alert("Por favor, informe sua senha.")
+            app.method.message("Por favor, informe sua senha.")
             document.querySelector("#txtPasswordLogin").focus()
             return;
         }
@@ -42,7 +42,19 @@ login.method = {
         app.method.post("/login", JSON.stringify(data),
             (response) => {
 
-                console.log(response);
+                if(response.status == 'error') {
+                    app.method.message(response.message)
+                    return
+                }
+
+                if(response.status == 'success') {
+                    app.method.storageValueSection(response.AccessToken, "token")
+                    app.method.storageValueSection(response.name, "name")
+                    app.method.storageValueSection(response.email, "email")
+                    app.method.storageValueSection(response.logo, "logo")
+
+                    window.location.href = "/dashboard/home.html"
+                }
 
             },
             (error) => {
